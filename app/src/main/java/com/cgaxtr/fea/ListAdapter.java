@@ -51,14 +51,12 @@ public class ListAdapter extends BaseAdapter {
         TextView lastName = (TextView) view.findViewById(R.id.lastName);
         TextView points = (TextView) view.findViewById(R.id.points);
 
-        // getting movie data for the row
         Player m = listPlayer.get(i);
 
-
-        // title
+        // Name
         name.setText(m.getName());
 
-        // title
+        // Lastname
         lastName.setText(m.getLastName());
 
         // rating

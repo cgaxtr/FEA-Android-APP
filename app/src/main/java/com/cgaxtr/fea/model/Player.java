@@ -1,42 +1,77 @@
 package com.cgaxtr.fea.model;
 
-/**
- * Created by Antonio on 31/07/2017.
- */
-
 public class Player {
-
+    private int id;
     private String name;
     private String lastName;
+    private String email;
+    private String password;
     private int points;
-    private int id;
 
-    public Player(String name, String lastName, int points, int id){
+    public Player(){}
+
+    public Player(int id, String name, String lastName, int points){
+        this.id = id;
         this.name = name;
         this.lastName = lastName;
         this.points = points;
+    }
+
+    public Player(int id, String name, String lastName, int points, String email, String password){
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.points = points;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getName(){
-        return this.name;
+    public String getName() {
+        return name;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getLastName(){
-        return this.lastName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastName(String lastName){
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public int getPoints(){
-        return this.points;
+    public String getEmail() {
+        return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
 
 }

@@ -14,18 +14,23 @@
         <activity
             android:name=".layouts.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name=".layouts.Sorteo"
             android:parentActivityName=".layouts.MainActivity" />
-        <activity android:name=".layouts.Login">
+        <activity
+            android:name=".layouts.Login"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".layouts.Register"></activity>
+        <activity
+            android:name=".layouts.Register"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

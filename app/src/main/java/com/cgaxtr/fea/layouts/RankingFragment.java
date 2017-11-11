@@ -33,27 +33,27 @@ public class RankingFragment extends Fragment {
 
         List<Player> list = new ArrayList<Player>();
 
-        Player p = new Player("Carlos", "Gómez", 10, 1);
+        Player p = new Player(1 ,"Carlos", "Gómez", 15);
         list.add(p);
-        p = new Player("Alberto", "Olmo", 10, 2);
+        p = new Player(2, "Alberto", "Olmo", 10);
         list.add(p);
-        p = new Player("Adrian", "Perez", 5, 3);
+        p = new Player(3,"Adrian", "Perez", 5);
         list.add(p);
-        p = new Player("Rodrigo", "Sanchez", 4, 3);
+        p = new Player(4,"Rodrigo", "Sanchez", 4);
         list.add(p);
-        p = new Player("Jesus", "Bricio", 3, 3);
+        p = new Player(5,"Jesus", "Bricio", 3);
         list.add(p);
-        p = new Player("Sergio", "Rivera", 2, 3);
+        p = new Player(6, "Sergio", "Rivera", 2);
         list.add(p);
-        p = new Player("Sergio", "lopez", 1, 3);
+        p = new Player(7, "Sergio", "lopez", 1);
         list.add(p);
-        p = new Player("Player1", "Player1", 1, 3);
+        p = new Player(8, "Player1", "Player1", 1);
         list.add(p);
-        p = new Player("Player2", "Player1", 1, 3);
+        p = new Player(9,"Player2", "Player1", 1);
         list.add(p);
-        p = new Player("Player3", "Player1", 1, 3);
+        p = new Player(10,"Player3", "Player1", 1);
         list.add(p);
-        p = new Player("Player4", "Player1", 1, 3);
+        p = new Player(11,"Player4", "Player1", 1);
         list.add(p);
 
         ListView listView = v.findViewById(R.id.list);
