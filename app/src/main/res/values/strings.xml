@@ -23,4 +23,6 @@
     <string name="name">Fullname</string>
     <string name="remember">Remember</string>
     <string name="hint_username">Username</string>
+    <string name="hint_surname">Surname</string>
+
 </resources>

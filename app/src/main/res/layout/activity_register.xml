@@ -28,6 +28,19 @@
             android:textColorHint="@color/input_login_hint" />
 
         <EditText
+            android:id="@+id/reg_surname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:hint="@string/hint_surname"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint" />
+
+        <EditText
             android:id="@+id/reg_email"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -76,6 +89,16 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />
+
+        <ProgressBar
+            android:id="@+id/reg_loading_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/btn_login_bg"
+            android:visibility="invisible"
+            android:layout_gravity="center" />
+
     </LinearLayout>
 
 </LinearLayout>
