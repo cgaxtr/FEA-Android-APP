@@ -37,6 +37,7 @@ public class Register extends AppCompatActivity {
     private EditText username, email, password;
     private ProgressBar loading;
     private Player player;
+    private boolean valid = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,13 +55,6 @@ public class Register extends AppCompatActivity {
                 registerUser();
             }
         });
-        this.register.addTextChangedListener(new TextValidator(register) {
-            @Override
-            public void validate(TextView textView, String text) {
-                //validate
-            }
-        });
-
         this.login = (Button)findViewById(R.id.btnLinkToLoginScreen);
         this.login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,14 +64,14 @@ public class Register extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-        this.login.addTextChangedListener(new TextValidator(login) {
+        this.username = (EditText)findViewById(R.id.reg_username);
+        this.username.addTextChangedListener(new TextValidator(username) {
             @Override
             public void validate(TextView textView, String text) {
-                //validate
+                if (text.equals(""))
+                    username.setError("this field can't be empty");
             }
         });
-        this.username = (EditText)findViewById(R.id.reg_username);
         this.email = (EditText)findViewById(R.id.reg_email);
         this.password = (EditText)findViewById(R.id.reg_password);
         this.loading = (ProgressBar)findViewById(R.id.reg_loading_spinner);
@@ -86,19 +80,7 @@ public class Register extends AppCompatActivity {
     private void registerUser(){
         Log.d("register", "registerFunction");
 
-        //validate edittext
-
-
         this.player = new Player();
-
-        //debug stuff=======================================
-        //String username;
-        //String email;
-        //String password;
-        //username = this.username.getText().toString();
-        //email = this.email.getText().toString();
-        //hash password
-        //password = this.password.getText().toString();
 
         JSONObject body = new JSONObject();
 
